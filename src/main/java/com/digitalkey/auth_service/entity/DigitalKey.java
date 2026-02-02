@@ -21,7 +21,7 @@ public class DigitalKey {
     private String vehicleId;
 
     @Column(nullable = false)
-    private String status;   // ACTIVE / REVOKED
+    private String status;
 
     private LocalDateTime createdAt;
 
@@ -29,5 +29,55 @@ public class DigitalKey {
         this.createdAt = LocalDateTime.now();
     }
 
-    // Getters & Setters
+    // -------- GETTERS --------
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getKeyId() {
+        return keyId;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public String getVehicleId() {
+        return vehicleId;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    // -------- SETTERS --------
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setKeyId(String keyId) {
+        this.keyId = keyId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public void setVehicleId(String vehicleId) {
+        this.vehicleId = vehicleId;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
 }
