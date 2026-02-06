@@ -44,4 +44,8 @@ public class DigitalKeyService {
         Optional<DigitalKey> key = digitalKeyRepository.findByKeyId(keyId);
         return key.map(DigitalKey::getStatus).orElse("NOT_FOUND");
     }
+    public DigitalKey getKeyById(String keyId) {
+        return digitalKeyRepository.findByKeyId(keyId)
+                .orElseThrow(() -> new RuntimeException("Digital Key not found"));
+    }
 }
